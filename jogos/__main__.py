@@ -7,9 +7,9 @@ import click
 )
 def main(jogo):
 
-    if jogo == 'aliens':
+    if jogo == 'alienigenas':
         from pygame.examples.aliens import main
-    elif jogo == 'stars':
+    elif jogo == 'estrelas':
         from pygame.examples.stars import main
     else:
         return

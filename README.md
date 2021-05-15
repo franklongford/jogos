@@ -7,7 +7,9 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-Pra rodar o jogo:
+Pra rodar, usa `roda` e entra o nome do jogo depois:
 ```
-roda
+roda [NOME]
 ```
+
+Por exemplo, `roda alienigenas` vai començar o jogo das alienígenas
