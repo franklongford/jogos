@@ -8,6 +8,7 @@ setup(
     name=NOME,
     version=VERSION,
     install_requires=[
+        'click',
         'pygame',
         'pygame_gui'
     ],
