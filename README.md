@@ -1,6 +1,12 @@
 # Jogos
 
-Para instalar o programa:
+Primeiro, baixar o código com a comanda:
+
+```
+git clone https://github.com/franklongford/jogos.git
+```
+
+Entao, instalar o programa:
 ```
 python3 -m venv .venv
 source .venv/bin/activate
