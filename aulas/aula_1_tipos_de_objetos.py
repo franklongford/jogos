@@ -1,5 +1,5 @@
-# Primeira aula de Python: como definir variáveis diferents
-# ---------------------------------------------------------
+# Primeira aula de Python: como definir objetos diferents
+# -------------------------------------------------------
 #
 # Linhas que comencar com um '#' symbolo sao comentes - nao vao funcionar na programma
 # e sao apenas usados pra explica coisas sobre o codigo.
