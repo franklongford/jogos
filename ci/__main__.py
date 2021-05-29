@@ -1,7 +1,9 @@
 import click
 import os
 import sys
-from subprocess import check_call, run
+from subprocess import check_call
+
+cwdir = os.path.dirname(__file__)
 
 
 @click.group()
@@ -15,9 +17,11 @@ def install():
         ["python3", "-m", "venv", ".venv"]
     )
     if "win" in sys.platform:
-        cmd = ["ci\install-windows.ps1"]
+        filename = os.path.join(cwdir, "install-windows.ps1")
+        cmd = ["powershell.exe", filename]
     else:
-        cmd = ["bash", "ci/install-linux.sh"]
+        filename = os.path.join(cwdir, "install-linux.sh")
+        cmd = ["bash", filename]
     check_call(cmd)
 
 
