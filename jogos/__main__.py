@@ -11,6 +11,8 @@ def main(jogo):
         from pygame.examples.aliens import main
     elif jogo == 'estrelas':
         from pygame.examples.stars import main
+    elif jogo == 'formiga':
+        from jogos.formiga import main
     else:
         return
     main()
