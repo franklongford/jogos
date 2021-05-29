@@ -7,7 +7,7 @@ from pygame_gui.elements import UIButton
 
 from jogos.imagens import get_image
 
-# Here we need to call init to load font text for the buttons
+# Aqui precisamos chamar init pra instalar fonte de texto pra os butoes
 pygame.init()
 
 SCREEN_SIZE = (300, 400)
@@ -59,14 +59,15 @@ class Ant(Sprite):
 
 def main():
 
-    # Creates a graphical window, based on system hardware
-    # settings
+    # Cria uma janela grafica usando as configuracoes do
+    # computador
     screen = pygame.display.set_mode(SCREEN_SIZE)
 
-    # Create Pygame GUI UIManager to tae control of processing
-    # events
+    # Cria um UIManager do Pygame GUI pra controlar procesando
+    # os eventos do jogo
     manager = pygame_gui.UIManager(SCREEN_SIZE)
 
+    # Cira os butoes do jogo
     flip_button = UIButton(
         relative_rect=pygame.Rect((0, 320), (100, 80)),
         text='Flip it!',
@@ -83,9 +84,8 @@ def main():
         manager=manager
     )
 
+    # Cria a formiga
     ant = Ant()
-
-    colony = Group(ant)
 
     clock = pygame.time.Clock()
     running = True
@@ -94,6 +94,7 @@ def main():
 
         time_delta = clock.tick(FPS) / 1000.0
 
+        # Reagir aos eventos do jogo
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
@@ -109,15 +110,13 @@ def main():
 
             manager.process_events(event)
 
+        # Atualiza os objetos do jogo
         manager.update(time_delta)
+        ant.update()
 
-        colony.update()
-
+        # Atualiza a janela do jogo
         screen.fill(WHITE)
-
-        for ant in colony.sprites():
-            ant.draw(screen)
-
+        ant.draw(screen)
         manager.draw_ui(screen)
         pygame.display.flip()
 
