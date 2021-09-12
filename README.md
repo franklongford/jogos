@@ -21,4 +21,4 @@ Pra rodar, usa `roda` e entra o nome do jogo depois:
 roda [NOME]
 ```
 
-Por exemplo, `roda alienigenas` vai començar o jogo das alienígenas
+Por exemplo, `roda alienigenas` vai começar o jogo das alienígenas
