@@ -25,5 +25,15 @@ def install():
     check_call(cmd)
 
 
+@cli.command(name='test')
+def test():
+    check_call(
+        ["python3", "-m", "venv", ".venv"]
+    )
+    check_call(
+        ["python3", "-m", "unittest", "discover"]
+    )
+
+
 if __name__ == '__main__':
     cli()
