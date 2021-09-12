@@ -17,11 +17,11 @@ WHITE = (255, 255, 255)
 FPS = 60
 
 
-class Ant(Sprite):
+class Formiga(Sprite):
 
     def __init__(self, size=(25, 25), speed=(2, 2)):
         # Call the parent class (Sprite) constructor
-        super(Ant, self).__init__()
+        super(Formiga, self).__init__()
 
         # Load an image of the ant
         self.image = get_image("ant_worker.png")
@@ -85,7 +85,7 @@ def main():
     )
 
     # Cria a formiga
-    ant = Ant()
+    formiga = Formiga()
 
     clock = pygame.time.Clock()
     running = True
@@ -102,21 +102,21 @@ def main():
             if event.type == pygame.USEREVENT:
                 if event.user_type == pygame_gui.UI_BUTTON_PRESSED:
                     if event.ui_element == flip_button:
-                        ant.reverse()
+                        formiga.reverse()
                     elif event.ui_element == speed_button:
-                        ant.speed_up()
+                        formiga.speed_up()
                     elif event.ui_element == slow_button:
-                        ant.slow_down()
+                        formiga.slow_down()
 
             manager.process_events(event)
 
         # Atualiza os objetos do jogo
         manager.update(time_delta)
-        ant.update()
+        formiga.update()
 
         # Atualiza a janela do jogo
         screen.fill(WHITE)
-        ant.draw(screen)
+        formiga.draw(screen)
         manager.draw_ui(screen)
         pygame.display.flip()
 
