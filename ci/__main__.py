@@ -25,5 +25,12 @@ def install():
     check_call(cmd)
 
 
+@cli.command(name='test')
+def test():
+    check_call(
+        ['python', '-m', 'unittest', 'discover']
+    )
+
+
 if __name__ == '__main__':
     cli()

@@ -32,6 +32,11 @@ jobs:
         pip install click
         python -m ci install
 
+    - name: Perform unit tests
+      run: |
+        source .venv/bin/activate
+        python -m ci test
+
     - name: Test command line app
       run: |
         source .venv/bin/activate
@@ -58,7 +63,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install click
         python -m ci install
-  
+
     - name: Test command line app
       run: |
         .venv\Scripts\activate.bat
