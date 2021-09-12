@@ -1,7 +1,7 @@
 import pygame
 import pygame_gui
 from pygame.transform import rotate
-from pygame.sprite import Sprite, Group
+from pygame.sprite import Sprite
 from pygame.math import Vector2
 from pygame_gui.elements import UIButton
 
