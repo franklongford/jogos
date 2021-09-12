@@ -34,6 +34,7 @@ jobs:
 
     - name: Perform unit tests
       run: |
+        source .venv/bin/activate
         python -m ci test
 
     - name: Test command line app
