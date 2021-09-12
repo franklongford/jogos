@@ -9,6 +9,7 @@ setup(
     version=VERSION,
     install_requires=[
         'click',
+        'numpy',
         'pygame',
         'pygame_gui'
     ],
